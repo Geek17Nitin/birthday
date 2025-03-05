@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Birthday Surprise</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card-container">
+        <div class="card closed" id="birthdayCard">
+            <p class="tap-to-open">🎁 Tap to Open 🎁</p>
+
+            <div class="content">
+                <h1>🎂 Happy Birthday, Cutie! ❤️</h1>
+                <p>Wishing you a day filled with love, laughter,  click and enjoy your favorite music! 🎶</p>
+                
+                <img src="shrestha.jpg.jpg" class="photo" alt="Birthday Girl">
+                
+                <div class="message-box">
+                    <p>💌 <strong>A Special Note from Nitin:</strong></p>
+                    <p>Hey bestie, on this special day, I just want to remind you how amazing you are i want you to grow with or without me always...</p>
+                    <p>Happy Birthday, SHRESTHA! 💖🎂</p>
+                    <p>— Nitin ❤️</p>
+                </div>
+
+                <button class="btn" onclick="playMusic()">Play Song 🎵</button>
+                <audio id="song" src="mehrma.mp3.mp3"></audio>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function playMusic() {
+            document.getElementById("song").play();
+        }
+
+        // Card Opening Animation
+        document.getElementById("birthdayCard").addEventListener("click", function () {
+            this.classList.remove("closed");
+            this.classList.add("open");
+            document.querySelector(".tap-to-open").style.display = "none";
+        });
+    </script>
+
+</body>
+</html>
